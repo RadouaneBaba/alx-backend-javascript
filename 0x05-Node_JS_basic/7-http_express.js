@@ -29,7 +29,7 @@ app.get('/students', (req, res) => {
       }
       res.send(resText);
     }).catch(() => {
-      throw new Error('Cannot load the database');
+      res.status(500).send('This is the list of our students\nCannot load the database');
     });
 });
 
