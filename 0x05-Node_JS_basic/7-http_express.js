@@ -5,10 +5,12 @@ const port = 1245;
 const fs = require('fs');
 
 app.get('/', (req, res) => {
+  res.header('Content-Type', 'text/plain');
   res.send('Hello Holberton School!');
 });
 
 app.get('/students', (req, res) => {
+  res.header('Content-Type', 'text/plain');
   fs.promises.readFile(process.argv[2], 'utf8')
     .then((data) => {
       const students = data.split('\n');
