@@ -26,7 +26,7 @@ app.get('/students', (req, res) => {
       }
       for (const [key, value] of Object.entries(fields)) {
         if (key !== 'field') {
-          resText += `Number of students in ${key}: ${value.length}. List: ${fields[key].join(', ')}`;
+          resText += `Number of students in ${key}: ${value.length}. List: ${fields[key].join(', ')}\n`;
         }
       }
       res.send(resText);
