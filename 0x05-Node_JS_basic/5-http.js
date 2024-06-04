@@ -28,8 +28,8 @@ const app = http.createServer((req, res) => {
           }
           res.end();
         }).catch(() => {
+          res.write('Cannot load the database');
           res.end();
-          throw new Error('Cannot load the database');
         });
     }
   }
