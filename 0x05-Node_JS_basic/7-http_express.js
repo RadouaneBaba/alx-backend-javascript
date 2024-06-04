@@ -31,7 +31,7 @@ app.get('/students', (req, res) => {
       }
       res.send(resText);
     }).catch(() => {
-      res.send('Cannot load the database');
+      throw new Error('Cannot load the database');
     });
 });
 
