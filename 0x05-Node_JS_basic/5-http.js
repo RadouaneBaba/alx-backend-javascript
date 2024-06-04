@@ -10,7 +10,7 @@ const app = http.createServer((req, res) => {
       res.write('This is the list of our students\n');
       fs.promises.readFile(process.argv[2], 'utf8')
         .then((data) => {
-          const students = data.split('\r\n');
+          const students = data.split('\n');
           const fields = {};
           const studentsCount = students.filter((student) => student !== '').length - 1;
           res.write(`Number of students: ${studentsCount}\n`);
