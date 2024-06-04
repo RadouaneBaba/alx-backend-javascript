@@ -6,7 +6,7 @@ function countStudents(path) {
       throw new Error('Cannot load the database');
     }
     const fields = {};
-    const students = data.split('\n');
+    const students = data.split('\r\n');
     console.log(`Number of students: ${students.length - 1}`);
     for (const student of students) {
       if (student !== '') {
