@@ -6,6 +6,6 @@ process.stdin.on('readable', () => {
   }
 });
 
-process.on('end', () => {
+process.on('exit', () => {
   console.log('This important software is now closing');
 });
