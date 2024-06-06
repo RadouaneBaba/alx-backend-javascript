@@ -31,6 +31,11 @@ describe('cart page', function () {
       expect(body).to.equal('Payment methods for cart 5');
     });
   });
+  it('negative cart', function () {
+    request('http://localhost:7865/cart/-5', function (err, resp, body) {
+      expect(resp.statusCode).to.equal(404);
+    });
+  });
   it('invalid type', function () {
     request('http://localhost:7865/cart/test', function (err, resp, body) {
       expect(resp.statusCode).to.equal(404);
