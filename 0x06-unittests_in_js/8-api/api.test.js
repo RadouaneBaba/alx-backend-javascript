@@ -13,4 +13,9 @@ describe('index page', function () {
       expect(body).to.equal('Welcome to the payment system');
     });
   });
+  it('invalid route', function () {
+    request('http://localhost:7865/test', function (err, resp, body) {
+      expect(resp.statusCode).to.equal(404);
+    });
+  });
 });
