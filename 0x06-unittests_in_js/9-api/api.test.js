@@ -46,8 +46,8 @@ describe('cart page', function () {
       expect(resp.statusCode).to.equal(404);
     });
   });
-  it('float cart num', function () {
-    request('http://localhost:7865/1.5', function (err, resp, body) {
+  it('wrong cart path', function () {
+    request('http://localhost:7865/cart/11/12', function (err, resp, body) {
       expect(resp.statusCode).to.equal(404);
     });
   });
