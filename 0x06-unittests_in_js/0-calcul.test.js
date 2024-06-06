@@ -17,4 +17,8 @@ describe('calcul', function () {
     const result = calculateNumber(1.5, 3.7);
     assert.equal(result, 6);
   });
+  it('test negative numbers', function () {
+    const result = calculateNumber(-1.5, -3.7);
+    assert.equal(result, -5);
+  });
 });
