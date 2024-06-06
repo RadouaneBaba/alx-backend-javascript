@@ -36,4 +36,9 @@ describe('cart page', function () {
       expect(resp.statusCode).to.equal(404);
     });
   });
+  it('cart route', function () {
+    request('http://localhost:7865/cart', function (err, resp, body) {
+      expect(resp.statusCode).to.equal(404);
+    });
+  });
 });
